@@ -43,6 +43,12 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
+      - name: Prep NPM
+        run: |
+          npm install
+      - name: Build with NPM
+        run: |
+          npm run build
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
